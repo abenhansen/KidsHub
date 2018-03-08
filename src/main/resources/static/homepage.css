@@ -1,0 +1,58 @@
+body    {
+    margin: -30px 0px 0px 0px;
+}
+
+h1  {
+    background-color: #96CCD7;
+    color: #493E3E;
+    font-family: monospace;
+    font-size: 60px;
+    text-align: center;
+    margin: 30px auto
+}
+
+
+/*.menubutton {
+    margin-right: auto;
+    background-color: cadetblue;
+    color: black;
+    border:none;
+    padding: 22px 245px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    /*border-radius: 5px;*/ /* https://www.w3schools.com/css/css3_borders.asp */
+/*box-shadow: 1px 1px 1px #888888;*/
+/*-webkit-transition-duration: 0.1s; /* Safari */
+/*transition-duration: 0.1s;
+}*/
+.menubutton button {
+    font-family: monospace;
+    background-color: #CAEAF0; /* Green background */
+    border: 2px solid black; /* Green border */
+    color: black; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.menubutton button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.menubutton:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.menubutton button:hover {
+    background-color: #B4D9E1;
+    color: black;
+}

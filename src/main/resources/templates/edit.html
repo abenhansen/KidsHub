@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Edit student</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Style.css}" href="style.css"/>
+</head>
+<body>
+<h1>Update information for student</h1>
+<form method="Post" th:action="@{/edit}">
+    <label>Student id:</label>
+    <input id="IDInput" type="text" th:field="${kid.ID}" readonly="true"/>
+    <label>Enter first name:</label>
+    <input type="text" th:field="${kid.fornavn}" required="true"/>
+    <label>Enter last name:</label>
+    <input type="text" th:field="${kid.efternavn}" required="true"/>
+    <label>Enter fødselsdag:</label>
+    <input type="text" th:field="${kid.fodselsdag}" required="true"/>
+    <label>Indskrivningsdato:</label>
+    <input type="text" th:field="${kid.indskrivning}" required="true"/>
+    <label>Foraeldre navn:</label>
+    <input type="text" th:field="${kid.foraelder}" required="true"/>
+    <label>Telefonnummer:</label>
+    <input type="text" th:field="${kid.nummer}" required="true"/>
+    <input type="submit" value="Send"/>
+</form>
+</body>
+</html>
