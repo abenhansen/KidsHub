@@ -136,7 +136,8 @@ public class HomeController {
 
     @PostMapping("/deleteEmp")
     public String deleteEmp(@ModelAttribute Employee employee) throws Exception {
-        employees.remove(employee.getID() - 1);
+
+        Employee.GemEmp("C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteEmp.txt", employees);
         return "redirect:/oplysEmp";
     }
 
