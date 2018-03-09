@@ -1,34 +1,56 @@
 body    {
     margin: -30px 0px 0px 0px;
+    font-family: monospace;
 }
 
 h1  {
     background-color: #96CCD7;
     color: #493E3E;
+    text-shadow: 1px 1px 1px black;
     font-family: monospace;
     font-size: 60px;
     text-align: center;
     margin: 30px auto
 }
 
+.center90 {
+    width: 90%;
+    margin: auto;
+}
 
-/*.menubutton {
-    margin-right: auto;
-    background-color: cadetblue;
-    color: black;
-    border:none;
-    padding: 22px 245px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    /*border-radius: 5px;*/ /* https://www.w3schools.com/css/css3_borders.asp */
-/*box-shadow: 1px 1px 1px #888888;*/
-/*-webkit-transition-duration: 0.1s; /* Safari */
-/*transition-duration: 0.1s;
-}*/
-.menubutton button {
+
+
+#nyheder    {
+    padding-top: 20px;
+}
+
+#feed   {
+    padding: 20px 20px 20px 20px;
+    border: solid black 2px;
+    border-radius: 2px;
+    box-shadow: 5px 5px 3px grey;
     font-family: monospace;
+    background-color: whitesmoke;
+    font-weight: bold;
+    width: 75%;
+    margin: auto;
+    margin-top: 50px;
+    max-height: 75%;
+}
+
+#feedContainer    {
+    border: solid black 1px;
+    border-radius: 2px;
+    font-weight: normal;
+}
+
+#feedIndhold    {
+    font-size: 14px;
+    border-left: solid 3px #008CBA;
+}
+
+.menubutton button {
+
     background-color: #CAEAF0; /* Green background */
     border: 2px solid black; /* Green border */
     color: black; /* White text */

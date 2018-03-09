@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Edit Employee</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Style.css}" href="style.css"/>
 </head>
 <body>
-$END$
+<h1>Update information for Employees</h1>
+<form method="Post" th:action="@{/editEmp}">
+    <label>Employee id:</label>
+    <input id="IDInput" type="text" th:field="${employee.ID}" readonly="true"/>
+    <label>Enter first name:</label>
+    <input type="text" th:field="${employee.fornavn}" required="true"/>
+    <label>Enter last name:</label>
+    <input type="text" th:field="${employee.efternavn}" required="true"/>
+    <label>Enter Alder:</label>
+    <input type="text" th:field="${employee.alder}" required="true"/>
+    <label>Stilling:</label>
+    <input type="text" th:field="${employee.stilling}" required="true"/>
+    <label>Telefonnummer:</label>
+    <input type="text" th:field="${employee.telefonnr}" required="true"/>
+    <input type="submit" value="Send"/>
+</form>
 </body>
 </html>

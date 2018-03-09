@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Create Employee</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Style.css}" href="style.css" />
 </head>
 <body>
-$END$
+<h1>Create Employee</h1>
+<form method="Post" th:action="@{/createEmp}">
+    <label>Skriv fornavn:</label>
+    <input type="text" th:field="${employee.fornavn}" required="true" />
+    <label>skriv efternavn</label>
+    <input type="text" th:field="${employee.efternavn}" required="true" />
+    <label>Skriv Alder:</label>
+    <input type="text" th:field="${employee.alder}" required="true" />
+    <label>Skriv Stilling</label>
+    <input type="text" th:field="${employee.stilling}" required="true" />
+    <label>Skriv Telefonnr</label>
+    <input type="text" th:field="${employee.telefonnr}" required="true" />
+    <input type="submit" value="Send" />
+</form>
 </body>
 </html>

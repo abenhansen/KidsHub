@@ -7,7 +7,7 @@
 <body>
 <h2>Are you sure you want to delete</h2>
 
-<form action="#" th:action="@{/delete}" method="post">
+<form action="#" th:action="@{/deleteKid}" method="post">
     <p th:text="${kid.fornavn + ' ' +  kid.efternavn}"></p>
     <input type="hidden" th:field="${kid.ID}"/>
     <input type="submit" value="YES" class="btn btn-del w"/>

@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Style.css}" href="style.css"/>
 </head>
 <body>
-$END$
+<h2>Are you sure you want to delete</h2>
+
+<form action="#" th:action="@{/deleteEmp}" method="post">
+    <p th:text="${employee.fornavn + ' ' +  employee.efternavn}"></p>
+    <input type="hidden" th:field="${employee.ID}"/>
+    <input type="submit" value="YES" class="btn btn-del w"/>
+    <a href="/" class="btn btn-create w">NO</a>
+</form>
 </body>
 </html>

@@ -7,7 +7,7 @@
 <body>
 <h1>barn</h1>
 <h3>Enrolled kid at KEA</h3>
-<a href="create.html">
+<a href="createKid.html">
     <button class="btn-create, btn" id="createBtn">create</button>
 </a>
 <table>
@@ -35,13 +35,13 @@
         <td th:text="${kid.foraelder}"/>
         <td th:text="${kid.nummer}"/>
         <td>
-            <a th:href="@{'/details?id='+${kid.ID}}">
+            <a th:href="@{'/detailsKid?id='+${kid.ID}}">
                 <button class="btn-details btn">details</button>
             </a>
-            <a th:href="@{'/edit?id='+${kid.ID}}">
+            <a th:href="@{'/editKid?id='+${kid.ID}}">
                 <button class="btn-ed btn">edit</button>
             </a>
-            <a th:href="@{'/delete?id='+${kid.ID}}">
+            <a th:href="@{'/deleteKid?id='+${kid.ID}}">
                 <button class="btn-del btn">delete</button>
             </a>
         </td>
