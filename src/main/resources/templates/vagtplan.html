@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Index</title>
     <link rel="stylesheet" type="text/css" th:href="@{Homepage.css}" href="homepage.css" />
+    <title>Vagtplan</title>
 </head>
 <body>
 <header style="background-color: #96CCD7; height: 25%" id="header">
@@ -22,34 +22,30 @@
         </a>
     </nav>
 </header>
-<h3>Liste over børn i børnehaven</h3>
-<a href="createKid.html">
+<h3>Vagter</h3>
+<a href="createVagt.html">
     <button class="btn-create, btn" id="createBtn">create</button>
 </a>
+
 <table>
     <thead>
     <tr>
-        <th>Id</th>
-        <th>Fornavn</th>
-        <th>Efternavn</th>
-        <th>Alder</th>
-        <th>Indskrivningsår</th>
-        <th>Forældre</th>
-        <th>Telefonnummer</th>
-
+        <th>Mandag</th>
+        <th>Tirsdag</th>
+        <th>Onsdag</th>
+        <th>Torsdag</th>
+        <th>Fredag</th>
         <th></th>
         <th></th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="kid: ${barn}">
-        <td th:text="${kid.ID}"/>
-        <td th:text="${kid.fornavn}"/>
-        <td th:text="${kid.efternavn}"/>
-        <td th:text="${kid.fodselsdag}"/>
-        <td th:text="${kid.indskrivning}"/>
-        <td th:text="${kid.foraelder}"/>
-        <td th:text="${kid.nummer}"/>
+    <tr th:each="vagtplan: ${vagter}">
+        <td th:text="${vagtplan.mandag}"/>
+        <td th:text="${vagtplan.tirsdag}"/>
+        <td th:text="${vagtplan.onsdag}"/>
+        <td th:text="${vagtplan.torsdag}"/>
+        <td th:text="${vagtplan.fredag}"/>
         <td>
             <a th:href="@{'/detailsKid?id='+${kid.ID}}">
                 <button class="btn-details btn">details</button>
@@ -64,5 +60,6 @@
     </tr>
     </tbody>
 </table>
+
 </body>
 </html>

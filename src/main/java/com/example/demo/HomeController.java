@@ -13,8 +13,11 @@ import java.util.ArrayList;
 public class HomeController {
     boolean load = true;
     boolean load2 = true;
+    String kidsFil ="C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteKids.txt";
+    String ansatFil ="C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteEmp.txt";
     ArrayList<Kid> barn = new ArrayList<>();
     ArrayList<Employee> employees = new ArrayList<Employee>();
+    ArrayList<Vagtplan> vagter = new ArrayList<Vagtplan>();
 
     @GetMapping("/")
     public String index (){
@@ -33,7 +36,7 @@ public class HomeController {
             barn.add(new Kid(1, "Svend", "Erik", "2", "Lars Larsen", "2121121", new Date()));
         }*/
         if (load) {
-            Kid.hentKids("C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteKids.txt", barn);
+            Kid.hentKids(kidsFil, barn);
             load=false;
         }
         model.addAttribute("barn", barn);
@@ -54,7 +57,7 @@ public class HomeController {
         int index = barn.size() + 1;
         kid.setID(index);
         barn.add(kid);
-        Kid.GemKid("C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteKids.txt", barn);
+        Kid.GemKid(kidsFil, barn);
         return "redirect:/oplysKid";
     }
 
@@ -73,7 +76,7 @@ public class HomeController {
     @PostMapping("/deleteKid")
     public String deleteKid(@ModelAttribute Kid kid) throws Exception {
         barn.remove(kid.getID() - 1);
-        Kid.GemKid("C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteKids.txt", barn);
+        Kid.GemKid(kidsFil, barn);
         return "redirect:/oplysKid";
     }
 
@@ -88,7 +91,7 @@ public class HomeController {
         int index = kid.getID();
         kid.setID(index);
         barn.set(index -1,kid);
-        Kid.GemKid("C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteKids.txt", barn);
+        Kid.GemKid(kidsFil, barn);
         return "redirect:/oplysKid";
     }
 
@@ -98,7 +101,7 @@ public class HomeController {
             barn.add(new Kid(1, "Svend", "Erik", "2", "Lars Larsen", "2121121", new Date()));
         }*/
         if (load2) {
-            Employee.hentEmp("C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteEmp.txt", employees);
+            Employee.hentEmp(ansatFil, employees);
             load2=false;
         }
         model.addAttribute("employees", employees);
@@ -119,7 +122,7 @@ public class HomeController {
         int index = employees.size() + 1;
         employee.setID(index);
         employees.add(employee);
-        Employee.GemEmp("C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteEmp.txt", employees);
+        Employee.GemEmp(ansatFil, employees);
         return "redirect:/oplysEmp";
     }
 
@@ -138,7 +141,7 @@ public class HomeController {
     @PostMapping("/deleteEmp")
     public String deleteEmp(@ModelAttribute Employee employee) throws Exception {
 
-        Employee.GemEmp("C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteEmp.txt", employees);
+        Employee.GemEmp(ansatFil, employees);
         return "redirect:/oplysEmp";
     }
 
@@ -153,8 +156,27 @@ public class HomeController {
         int index = employee.getID();
         employee.setID(index);
         employees.set(index -1,employee);
-        Employee.GemEmp("C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteEmp.txt", employees);
+        Employee.GemEmp(ansatFil, employees);
         return "redirect:/oplysEmp";
     }
+
+    @GetMapping("/vagtplan")
+    public String vagtplan (Model model){
+        model.addAttribute("vagter", vagter);
+        return"vagtplan";
+    }
+
+    @GetMapping("/createVagt")
+    public String createVagt (Model model){
+        model.addAttribute("vagter", new Vagtplan());
+        return"createVagt";
+    }
+
+    @PostMapping("/createVagt")
+    public String createVagt(@ModelAttribute Vagtplan vagtplan) throws Exception{
+        vagter.add(vagtplan);
+        return "redirect:/vagtplan";
+    }
+
 }
 

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<link rel="stylesheet" type="text/css" th:href="@{Homepage.css}" href="homepage.css" />
 <head>
-    <title>Details</title>
+    <title>Create kid</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Homepage.css}" href="homepage.css" />
 </head>
 <body>
 <header style="background-color: #96CCD7; height: 25%" id="header">
@@ -22,15 +22,9 @@
         </a>
     </nav>
 </header>
-<h1>Details</h1>
-<p th:text="'ID: ' + ${kid.ID}"/>
-<p th:text="'Fornavn: ' + ${kid.fornavn}"/>
-<p th:text="'Efternavn: ' + ${kid.efternavn}"/>
-<p th:text="'Alder: ' + ${kid.fodselsdag}"/>
-<p th:text="'Indkrivningsår: ' + ${kid.indskrivning}"/>
-<p th:text="'Forældre: ' + ${kid.foraelder}"/>
-<p th:text="'Telefonnummer: ' + ${kid.nummer}"/>
-
-
+<h1>Vagter</h1>
+<form method="Post" th:action="@{/createVagt}">
+    <input type="submit" value="Send" />
+</form>
 </body>
 </html>
