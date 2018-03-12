@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" type="text/css" th:href="@{style.css}" href="style.css"/>
+<head>
+    <title>Details</title>
+</head>
+<body>
+<h1>Details</h1>
+<p th:text="'ID: ' + ${kid.ID}"/>
+<p th:text="'First Name: ' + ${kid.fornavn}"/>
+<p th:text="'LastName: ' + ${kid.efternavn}"/>
+<p th:text="'Birthdate Date: ' + ${kid.fodselsdag}"/>
+<p th:text="'indkrivning: ' + ${kid.indskrivning}"/>
+<p th:text="'foraelder: ' + ${kid.foraelder}"/>
+<p th:text="'nummer: ' + ${kid.nummer}"/>
+
+<h2 th:text="'Enrollments for ' + ${kid.fornavn} + ' ' + ${kid.efternavn}"></h2>
+<p>The content here will come later</p>
+
+</body>
+</html>

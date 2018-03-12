@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Create kid</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Style.css}" href="style.css" />
+</head>
+<body>
+<h1>Create kid</h1>
+<form method="Post" th:action="@{/create}">
+    <label>Skriv fornavn:</label>
+    <input type="text" th:field="${kid.fornavn}" required="true" />
+    <label>skriv efternavn</label>
+    <input type="text" th:field="${kid.efternavn}" required="true" />
+    <label>Skriv fødselsdag:</label>
+    <input type="text" th:field="${kid.fodselsdag}" required="true" />
+    <label>Skriv indskrivningsår</label>
+    <input type="text" th:field="${kid.indskrivning}" required="true" />
+    <label>Skriv foraelder</label>
+    <input type="text" th:field="${kid.foraelder}" required="true" />
+    <label>Skriv nummer</label>
+    <input type="text" th:field="${kid.nummer}" required="true" />
+    <input type="submit" value="Send" />
+</form>
+</body>
+</html>

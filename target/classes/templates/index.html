@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" th:href="homepage.css"/>
+</head>
+<body>
+<header style="background-color: #96CCD7; height: 25%" id="header">
+    <h1>Roskilde Frie Børnehave</h1>
+    <nav class="menubutton" style="width: 100%">
+        <a th:href="index.html">
+            <button style="width: 25%">Forside</button>
+        </a>
+        <a th:href="oplysKid.html">
+            <button style="width: 25%">Oplysninger</button>
+        </a>
+        <a th:href="oplysEmp.html">
+        <button style="width: 25%">Info ansatte</button>
+        </a>
+        <button style="width: 25%">Vagtplan</button>
+    </nav>
+</header>
+<div id="feed">
+    <button>Tilføj Nyhed</button>
+    <button>Rediger Nyhed</button>
+    <button>Fjern Nyhed</button>
+    <h2 id="nyheder" class="center">Nyheder</h2>
+    <div id="feedContainer" class="center">
+        <div id="feedIndhold">
+            <p>This is a placeholder</p>
+            <p>This is a placeholder</p>
+            <p>This is a placeholder</p>
+            <p>This is a placeholder</p>
+            <p>This is a placeholder</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

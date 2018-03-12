@@ -1,0 +1,148 @@
+body {
+
+    font-family: arial, sans-serif;
+    margin-left: 10%;
+    padding: 0;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: #222;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+nav a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.footer {
+    padding-top: 20px;
+    padding-right: 5px;
+    text-align: right;
+    color: #666666;
+    font-style: italic;
+
+}
+
+/* table styles */
+/* https://www.w3schools.com/html/html_tables.asp */
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    /*padding: 8px;*/
+    padding: 5px 8px 5px 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+input {
+    display: block;
+    width: 50%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+    margin: 7px 0px 7px 0px;
+}
+
+/* Buttons */
+/* https://www.w3schools.com/css/css3_buttons.asp */
+
+.btn {
+
+}
+
+.btn:hover {
+    background: #27c400;
+    background-image: -webkit-linear-gradient(top, #27c400, #27c400);
+    background-image: -moz-linear-gradient(top, #27c400, #27c400);
+    background-image: -ms-linear-gradient(top, #27c400, #27c400);
+    background-image: -o-linear-gradient(top, #27c400, #27c400);
+    background-image: linear-gradient(to bottom, #27c400, #27c400);
+    text-decoration: none;
+}
+
+#createBtn {
+    background: #4800bd;
+    background-image: -webkit-linear-gradient(top, #4800bd, #4800bd);
+    background-image: -moz-linear-gradient(top, #4800bd, #4800bd);
+    background-image: -ms-linear-gradient(top, #4800bd, #4800bd);
+    background-image: -o-linear-gradient(top, #4800bd, #4800bd);
+    background-image: linear-gradient(to bottom, #4800bd, #4800bd);
+    -webkit-border-radius: 15;
+    -moz-border-radius: 15;
+    border-radius: 15px;
+    text-shadow: 1px 0px 2px #050505;
+    font-family: Georgia;
+    color: #000000;
+    font-size: 23px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+/* Green */
+.btn-details{
+    background-color: #4CAF50;
+}
+
+/* Black */
+.btn-ed {
+    background-color: #008CBA;
+}
+
+/* red */
+.btn-del {
+    background-color: #f44336;
+}
+
+/* Red */
+
+.btn:hover {
+    box-shadow: 2px 2px 2px #888888;
+}
+
+.w {
+    width: 20%;
+}
+
+/* input fields */
+
+#studentIDInput{
+    background-color: #66666661;
+}
+a{
+    text-decoration-line: none;
+}
+
+.square{
+    background: black;
+    left:    150px;
+    width: 95vw;
+    height: 5vw;
+
+}

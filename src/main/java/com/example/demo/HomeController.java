@@ -12,6 +12,7 @@ import java.util.ArrayList;
 @Controller
 public class HomeController {
     boolean load = true;
+    boolean load2 = true;
     ArrayList<Kid> barn = new ArrayList<>();
     ArrayList<Employee> employees = new ArrayList<Employee>();
 
@@ -96,9 +97,9 @@ public class HomeController {
        /* if (barn.size() == 0) {
             barn.add(new Kid(1, "Svend", "Erik", "2", "Lars Larsen", "2121121", new Date()));
         }*/
-        if (load) {
+        if (load2) {
             Employee.hentEmp("C:\\Users\\abenh\\Desktop\\GardenKinder\\src\\main\\resources\\static\\GemteEmp.txt", employees);
-            load=false;
+            load2=false;
         }
         model.addAttribute("employees", employees);
         return "oplysEmp";
