@@ -24,7 +24,24 @@
 </header>
 <h1>Vagter</h1>
 <form method="Post" th:action="@{/createVagt}">
+    <label>Vælg dag:</label>
+    <input type="checkbox" th:value="mandag"  th:field="${vagtplan.dag}" >Mandag </input>
+    <input type="checkbox" th:value="tirsdag" th:field="${vagtplan.dag}" >Tirsdag </input>
+    <input type="checkbox" th:value="onsdag" th:field="${vagtplan.dag}"> Onsdag </input>
+    <input type="checkbox" th:value="torsdag" th:field="${vagtplan.dag}" > Torsdag </input>
+    <input type="checkbox" th:value="fredag"  th:field="${vagtplan.dag}" > Fredag </input>
+    <p></p>
+    <table>
+        <thead>
+        </thead>
+        <tbody>
+    <tr th:each="employee: ${employees}">
+        <input type="checkbox" th:text="${employee.fornavn}" th:value="${employee.fullname}" th:field="${vagtplan.ansat}"/><p style="display:inline">&nbsp;</p><p style="display:inline" th:text="${employee.efternavn}"></p>
+    </tr>
+    <!--<input type="text" th:field="${vagtplan.ansat}" required="true" />-->
     <input type="submit" value="Send" />
+        </tbody>
+        </table>
 </form>
 </body>
 </html>

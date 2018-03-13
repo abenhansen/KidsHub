@@ -10,9 +10,11 @@ public class Employee {
     private int ID;
     private String fornavn;
     private String efternavn;
+    private String fullname=fornavn+""+efternavn;
     private int alder;
     private String stilling;
     private int telefonnr;
+
 
     public Employee(int ID, String fornavn, String efternavn, int alder, String stilling, int telefonnr) {
         this.ID = ID;
@@ -97,5 +99,13 @@ public class Employee {
             scanner.nextLine();
         }
         scanner.close();
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 }

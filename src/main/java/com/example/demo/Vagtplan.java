@@ -1,71 +1,50 @@
 package com.example.demo;
 
 public class Vagtplan {
-    String Mandag;
-    String Tirsdag;
-    String Onsdag;
-    String Torsdag;
-    String Fredag;
-    Employee Ansat;
+    private String Dag;
+    private String ansat;
+    private int VagtID;
 
-    public Vagtplan(String mandag, String tirsdag, String onsdag, String torsdag, String fredag, Employee ansat) {
-        Mandag = mandag;
-        Tirsdag = tirsdag;
-        Onsdag = onsdag;
-        Torsdag = torsdag;
-        Fredag = fredag;
-        Ansat = ansat;
+    public Vagtplan(String dag, String ansat, int vagtID) {
+        Dag = dag;
+        this.ansat = ansat;
+        VagtID = vagtID;
     }
-
-    public Vagtplan(){
+    public Vagtplan() {
 
     }
-
-    public String getMandag() {
-        return Mandag;
+    @Override
+    public String toString() {
+        return "Vagtplan{" +
+                "Dag='" + Dag + '\'' +
+                ", ansat='" + ansat + '\'' +
+                ", VagtID=" + VagtID +
+                '}';
     }
 
-    public void setMandag(String mandag) {
-        Mandag = mandag;
+    public String getDag() {
+        return Dag;
     }
 
-    public String getTirsdag() {
-        return Tirsdag;
+    public void setDag(String dag) {
+        Dag = dag;
     }
 
-    public void setTirsdag(String tirsdag) {
-        Tirsdag = tirsdag;
+    public String getAnsat() {
+        return ansat;
     }
 
-    public String getOnsdag() {
-        return Onsdag;
+    public void setAnsat(String ansat) {
+        this.ansat = ansat;
     }
 
-    public void setOnsdag(String onsdag) {
-        Onsdag = onsdag;
+    public int getVagtID() {
+        return VagtID;
     }
 
-    public String getTorsdag() {
-        return Torsdag;
+    public void setVagtID(int vagtID) {
+        VagtID = vagtID;
     }
 
-    public void setTorsdag(String torsdag) {
-        Torsdag = torsdag;
-    }
 
-    public String getFredag() {
-        return Fredag;
-    }
-
-    public void setFredag(String fredag) {
-        Fredag = fredag;
-    }
-
-    public Employee getAnsat() {
-        return Ansat;
-    }
-
-    public void setAnsat(Employee ansat) {
-        Ansat = ansat;
-    }
 }

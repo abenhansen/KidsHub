@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 @Controller
 public class HomeController {
@@ -167,14 +168,26 @@ public class HomeController {
     }
 
     @GetMapping("/createVagt")
-    public String createVagt (Model model){
-        model.addAttribute("vagter", new Vagtplan());
+    public String createVagt (Model model)throws Exception{
+        model.addAttribute("vagtplan", new Vagtplan());
+        if (load2) {
+            Employee.hentEmp(ansatFil, employees);
+            load2=false;
+        }
+        for(Employee e: employees) {
+            e.setFullname(e.getFornavn()+" "+e.getEfternavn());
+        }
+        model.addAttribute("employees", employees);
+
         return"createVagt";
     }
 
     @PostMapping("/createVagt")
     public String createVagt(@ModelAttribute Vagtplan vagtplan) throws Exception{
+        int index = vagter.size() + 1;
+        vagtplan.setVagtID(index);
         vagter.add(vagtplan);
+        System.out.println(vagter);
         return "redirect:/vagtplan";
     }
 

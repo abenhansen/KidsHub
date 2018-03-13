@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" type="text/css" th:href="@{Homepage.css}" href="homepage.css" />
+    <link rel="stylesheet" type="text/css" th:href="@{Table.css}" href="Table.css" />
     <title>Vagtplan</title>
 </head>
 <body>
@@ -41,13 +42,9 @@
     </thead>
     <tbody>
     <tr th:each="vagtplan: ${vagter}">
-        <td th:text="${vagtplan.mandag}"/>
-        <td th:text="${vagtplan.tirsdag}"/>
-        <td th:text="${vagtplan.onsdag}"/>
-        <td th:text="${vagtplan.torsdag}"/>
-        <td th:text="${vagtplan.fredag}"/>
+        <td th:text="${vagtplan.ansat}"/>
         <td>
-            <a th:href="@{'/detailsKid?id='+${kid.ID}}">
+            <!--<a th:href="@{'/detailsKid?id='+${kid.ID}}">
                 <button class="btn-details btn">details</button>
             </a>
             <a th:href="@{'/editKid?id='+${kid.ID}}">
@@ -55,7 +52,7 @@
             </a>
             <a th:href="@{'/deleteKid?id='+${kid.ID}}">
                 <button class="btn-del btn">delete</button>
-            </a>
+            </a>-->
         </td>
     </tr>
     </tbody>

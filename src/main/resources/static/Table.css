@@ -1,0 +1,80 @@
+table {
+    width:70%;
+    border-collapse: collapse;
+    border: 1px solid #dddddd;
+    margin: 0 15%;
+}
+td, th {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+tr:nth-child(even){
+    background-color: #dddddd;
+    border: 1px solid white;
+}
+body {
+    height: 100%;
+    background-color: #cdf8f7;
+}
+
+.btn-ed, .btn-del, .btn-details, #createBtn {
+    color: white;
+    margin: 4px 6px;
+    border: none;
+    padding: 8px 10px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    background-color: limegreen;
+}
+
+.btn-ed:hover, #createBtn:hover{
+    background-color: #329132;
+}
+
+.btn-del {
+    background-color: #cd0000;
+}
+
+.btn-del:hover{
+    background-color: #9c0000;
+}
+
+.btn-details {
+    background-color: #008CBA;
+}
+
+.btn-details:hover {
+    background-color: #00698f;
+}
+
+#createBtn {
+    padding: 8px 40px;
+    margin-left: 15%;
+}
+
+h3 {
+    width: 70%;
+    Margin: 0 15%;
+}
+
+input[type=submit] {
+    background-color: limegreen;
+    cursor:pointer;
+    width:52%;
+    color:white;
+}
+
+input[type=submit]:hover {
+    background-color: #329132;
+}
+
+input[type=text]{
+}
