@@ -1,14 +1,15 @@
 body    {
+    background-color: honeydew;
     margin: -30px 0px 0px 0px;
     font-family: monospace;
 }
 
 h1  {
-    background-color: #96CCD7;
-    color: #493E3E;
+    background-color: #4484CE;
+    color: honeydew;
     text-shadow: 1px 1px 1px black;
     font-family: monospace;
-    font-size: 60px;
+    font-size: 50px;
     text-align: center;
     margin: 30px auto
 }
@@ -18,7 +19,15 @@ h1  {
     margin: auto;
 }
 
+header  {
+    background-color: #4484CE !important;
+    height: 25% !important;
+}
 
+.detailhead {
+    font-size: 16px;
+
+}
 
 #nyheder    {
     padding-top: 20px;
@@ -51,15 +60,16 @@ h1  {
 
 .menubutton button {
 
-    background-color: #CAEAF0; /* Green background */
-    border: 2px solid black; /* Green border */
-    color: black; /* White text */
+    background-color: #4484CE;
+    border: 1px solid #493E3E;
+    color: honeydew; /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
     border-radius: 2px;
     font-size: 15px;
     font-weight: bold;
+    text-shadow: 1px 1px 1px #111214;
 }
 
 .menubutton button:not(:last-child) {
@@ -75,6 +85,21 @@ h1  {
 
 /* Add a background color on hover */
 .menubutton button:hover {
-    background-color: #B4D9E1;
-    color: black;
+    background-color: #dbb600;
+    color: honeydew;
+}
+
+input {
+    display: block;
+    width: 50%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+    margin: 7px 0px 7px 0px;
 }

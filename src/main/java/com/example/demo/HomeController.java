@@ -21,12 +21,12 @@ public class HomeController {
     ArrayList<Vagtplan> vagter = new ArrayList<Vagtplan>();
 
     @GetMapping("/")
-    public String index (){
-        return "index";
+    public String login (){
+        return "login";
     }
 
     @GetMapping("index")
-    public String indexredirect (){
+    public String index (){
         return "index";
     }
 

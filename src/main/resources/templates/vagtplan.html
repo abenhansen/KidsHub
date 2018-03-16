@@ -36,13 +36,16 @@
         <th>Onsdag</th>
         <th>Torsdag</th>
         <th>Fredag</th>
-        <th></th>
-        <th></th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="vagtplan: ${vagter}">
-        <td th:text="${vagtplan.ansat}"/>
+        <td th:text="${vagtplan.ansat}" th:if="${vagtplan.dag}==1"/>  <td th:unless="${vagtplan.dag}==1">&nbsp;</td>
+        <td th:text="${vagtplan.ansat}" th:if="${vagtplan.dag}==2"/>  <td th:unless="${vagtplan.dag}==2">&nbsp;</td>
+        <td th:text="${vagtplan.ansat}" th:if="${vagtplan.dag}==3"/>  <td th:unless="${vagtplan.dag}==3">&nbsp;</td>
+        <td th:text="${vagtplan.ansat}" th:if="${vagtplan.dag}==4"/>  <td th:unless="${vagtplan.dag}==4">&nbsp;</td>
+        <td th:text="${vagtplan.ansat}" th:if="${vagtplan.dag}==5"/>  <td th:unless="${vagtplan.dag}==5">&nbsp;</td>
+
         <td>
             <!--<a th:href="@{'/detailsKid?id='+${kid.ID}}">
                 <button class="btn-details btn">details</button>
