@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>Edit Employee</title>
-    <link rel="stylesheet" type="text/css" th:href="@{Homepage.css}" href="homepage.css" />
+    <link rel="stylesheet" type="text/css" href="homepage.css" />
 </head>
 <body>
 <header style="background-color: #96CCD7; height: 25%" id="header">
@@ -22,7 +22,7 @@
         </a>
     </nav>
 </header>
-<h1>Ændre information for den ansatte</h1>
+<p class="detailhead">Ændre information for den ansatte</p>
 <form method="Post" th:action="@{/editEmp}">
     <label>Ansatte id:</label>
     <input id="IDInput" type="text" th:field="${employee.ID}" readonly="true"/>

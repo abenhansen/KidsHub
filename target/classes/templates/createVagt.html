@@ -2,10 +2,10 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>Create kid</title>
-    <link rel="stylesheet" type="text/css" th:href="@{Homepage.css}" href="homepage.css" />
+    <link rel="stylesheet" type="text/css"  href="homepage.css" />
 </head>
 <body>
-<header style="background-color: #96CCD7; height: 25%" id="header">
+<header style="background-color: #4484CE; height: 25%">
     <h1>Roskilde Frie Børnehave</h1>
     <nav class="menubutton" style="width: 100%">
         <a th:href="index.html">
@@ -22,7 +22,7 @@
         </a>
     </nav>
 </header>
-<h1>Vagter</h1>
+<p class="detailhead">Vagter</p>
 <form method="Post" th:action="@{/createVagt}">
     <label>Vælg dag:</label>
     <input type="radio" th:value="1"  th:field="${vagtplan.dag}" >Mandag </input>

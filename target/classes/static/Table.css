@@ -18,10 +18,6 @@ tr:nth-child(even){
     background-color: #dddddd;
     border: 1px solid white;
 }
-body {
-    height: 100%;
-    background-color: #cdf8f7;
-}
 
 .btn-ed, .btn-del, .btn-details, #createBtn {
     color: white;

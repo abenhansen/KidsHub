@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<link rel="stylesheet" type="text/css" th:href="@{Homepage.css}" href="homepage.css" />
+<link rel="stylesheet" type="text/css" href="homepage.css" />
 <head>
     <title>Details</title>
 </head>
@@ -22,7 +22,8 @@
         </a>
     </nav>
 </header>
-<h1>Details</h1>
+<p class="detailhead">Details</p>
+
 <p th:text="'ID: ' + ${kid.ID}"/>
 <p th:text="'Fornavn: ' + ${kid.fornavn}"/>
 <p th:text="'Efternavn: ' + ${kid.efternavn}"/>
@@ -30,7 +31,5 @@
 <p th:text="'Indkrivningsår: ' + ${kid.indskrivning}"/>
 <p th:text="'Forældre: ' + ${kid.foraelder}"/>
 <p th:text="'Telefonnummer: ' + ${kid.nummer}"/>
-
-
 </body>
 </html>
